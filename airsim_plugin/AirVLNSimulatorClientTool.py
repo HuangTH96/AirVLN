@@ -239,9 +239,11 @@ class AirVLNSimulatorClientTool:
                             img_depth = np.array(obs_depth_img, dtype=np.float32)
 
                         break
-                    except:
+                    except Exception as e:
                         time_sleep_cnt += 1
-                        logger.error("Image retrieval error")
+                        logger.error(f"Image retrieval error, error: {e}\n")
+                        import traceback
+                        traceback.print_exc()
                         logger.error('time_sleep_cnt: {}'.format(time_sleep_cnt))
                         time.sleep(1)
 
@@ -295,9 +297,11 @@ class AirVLNSimulatorClientTool:
                             img_depth = np.array(obs_depth_img, dtype=np.float32)
 
                         break
-                    except:
+                    except Exception as e:
                         time_sleep_cnt += 1
-                        logger.error("Failed to retrieve image")
+                        logger.error(f"Failed to retrieve image, error: {e}\n")
+                        import traceback
+                        traceback.print_exc()
                         logger.error('time_sleep_cnt: {}'.format(time_sleep_cnt))
                         time.sleep(1)
 
