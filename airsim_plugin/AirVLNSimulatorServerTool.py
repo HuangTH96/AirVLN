@@ -354,7 +354,13 @@ class EventHandler(object):
                 p_s.append(None)
                 continue
             else:
-                subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings {} ".format(
+                # subprocess_execute = "bash {} -RenderOffscreen -NoSound -NoVSync -GraphicsAdapter={} --settings {} ".format(
+                #     choose_env_exe_paths[index],
+                #     gpus[index],
+                #     str(CWD_DIR / 'airsim_plugin/settings' / str(index+1) / 'settings.json'),
+                # )
+
+                subprocess_execute = "bash {} -GraphicsAdapter={} --settings {} ".format(
                     choose_env_exe_paths[index],
                     gpus[index],
                     str(CWD_DIR / 'airsim_plugin/settings' / str(index+1) / 'settings.json'),
