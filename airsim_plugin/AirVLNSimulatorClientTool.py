@@ -308,13 +308,13 @@ class AirVLNSimulatorClientTool:
             #       channel order of the images captured is as expected by visualization!
             # Example is as below:
 
-            # plt.imsave('./tmp/img_rgb.png', img_rgb)
+            plt.imsave('./tmp/img_rgb.png', img_rgb)
 
-            # img_rgb = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2RGB)
+            img_rgb = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2RGB)
 
-            # plt.imsave('./tmp/img_rgb_converted.png', img_rgb)
+            plt.imsave('./tmp/img_rgb_converted.png', img_rgb)
 
-            # plt.imsave('./tmp/img_depth.png', img_depth.squeeze(), cmap='gray')
+            plt.imsave('./tmp/img_depth.png', img_depth.squeeze(), cmap='gray')
 
             return img_rgb, img_depth
 
