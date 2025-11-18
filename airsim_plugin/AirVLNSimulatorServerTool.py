@@ -65,7 +65,7 @@ AIRSIM_SETTINGS_TEMPLATE = {
 }
 
 
-def create_drones(drone_num_per_env=1, show_scene=False, uav_mode=False) -> dict:
+def create_drones(drone_num_per_env=1, show_scene=True, uav_mode=False) -> dict:
     airsim_settings = copy.deepcopy(AIRSIM_SETTINGS_TEMPLATE)
 
     if show_scene == True:
