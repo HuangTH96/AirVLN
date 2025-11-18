@@ -307,7 +307,7 @@ class AirVLNSimulatorClientTool:
             # Tip: If you are using AirVLN code for the first time, please confirm that the
             #       channel order of the images captured is as expected by visualization!
             # Example is as below:
-
+            os.makedirs('./tmp', exist_ok=True)
             plt.imsave('./tmp/img_rgb.png', img_rgb)
 
             img_rgb = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2RGB)
